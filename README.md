@@ -151,7 +151,7 @@ The MT6012 is a gimbal-class BLDC motor with **12 pole pairs**. More pole pairs 
 
 ### ODrive S1 Motor Driver
 
-The ODrive S1 was chosen because it has a **built-in MA325S absolute magnetic encoder** connected internally via SPI. This eliminates all external encoder wiring — no ribbon cables, no connector failures, no alignment issues. The encoder is always connected and always reads correctly.
+The ODrive S1 was chosen because it has a **built-in MA702 absolute magnetic encoder** connected internally via SPI. This eliminates all external encoder wiring — no ribbon cables, no connector failures, no alignment issues. The encoder is always connected and always reads correctly.
 
 It also supports the **`odrivetool` Python SDK**, which allows full motor configuration and real-time position control from a Python script on the RPi with no custom protocol implementation.
 
@@ -178,12 +178,12 @@ No pin conflicts, no overlay configuration, no protocol issues.
 Raspberry Pi 4
 ├── USB Port 0 ──────── ODrive S1  (Shoulder | SN: 396434783331 | fw v0.6.12)
 │                            └── Motor terminals A/B/C → Tarot MT4008
-│                            └── MA325S encoder (internal SPI, no external wiring)
+│                            └── MA702 encoder (internal SPI, no external wiring)
 │                            └── 24V DC power input
 │
 └── USB Port 1 ──────── ODrive S1  (Elbow | SN: 394C34693331 | fw v0.6.9)
                              └── Motor terminals A/B/C → Tarot MT6012
-                             └── MA325S encoder (internal SPI, no external wiring)
+                             └── MA702 encoder (internal SPI, no external wiring)
                              └── 24V DC power input
 
 24V / 12A Power Supply
